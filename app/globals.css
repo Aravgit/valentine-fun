@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-valentine-purple-50: #faf5ff;
+  --color-valentine-purple-100: #f3e8ff;
+  --color-valentine-purple-200: #e9d5ff;
+  --color-valentine-purple-300: #d8b4fe;
+  --color-valentine-purple-400: #c084fc;
+  --color-valentine-purple-500: #a855f7;
+  --color-valentine-purple-600: #9333ea;
+  --color-valentine-purple-700: #7e22ce;
+  --color-valentine-purple-800: #6b21a8;
+  --color-valentine-purple-900: #581c87;
+
+  --color-valentine-pink-50: #fdf2f8;
+  --color-valentine-pink-100: #fce7f3;
+  --color-valentine-pink-200: #fbcfe8;
+  --color-valentine-pink-300: #f9a8d4;
+  --color-valentine-pink-400: #f472b6;
+  --color-valentine-pink-500: #ec4899;
+  --color-valentine-pink-600: #db2777;
+  --color-valentine-pink-700: #be185d;
+  --color-valentine-pink-800: #9d174d;
+  --color-valentine-pink-900: #831843;
+
+  --color-valentine-mauve: #c4b5d6;
+  --color-valentine-blush: #ffc9d4;
+
+  --font-family-display: var(--font-playfair), serif;
+  --font-family-sans: var(--font-inter), sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
