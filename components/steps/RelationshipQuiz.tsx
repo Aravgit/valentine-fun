@@ -27,9 +27,9 @@ const questions: Question[] = [
   },
   {
     id: 3,
-    question: "Where was our first trip to?",
-    answer: ["narsapur lake", "narsapur", "narsapurlake"],
-    hint: "A peaceful lake..."
+    question: "What was my first gift to you?",
+    answer: ["coffee", "coffee powder", "country bean coffee"],
+    hint: "It was something to do with coffee..."
   }
 ];
 
