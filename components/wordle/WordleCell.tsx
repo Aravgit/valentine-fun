@@ -54,8 +54,8 @@ export function WordleCell({ letter, color, isRevealing, delay = 0 }: WordleCell
   return (
     <motion.div
       className={cn(
-        'w-14 h-14 border-2 flex items-center justify-center',
-        'text-2xl font-bold uppercase rounded',
+        'w-12 h-12 sm:w-14 sm:h-14 border-2 flex items-center justify-center',
+        'text-xl sm:text-2xl font-bold uppercase rounded',
         hasBorder ? 'border-gray-500 bg-white text-gray-900' : colorClasses[displayColor]
       )}
       animate={controls}

@@ -23,9 +23,9 @@ const colorClasses: Record<LetterColor, string> = {
 
 export function Keyboard({ onKeyPress, letterStatuses }: KeyboardProps) {
   return (
-    <div className="flex flex-col gap-2 max-w-2xl mx-auto">
+    <div className="flex flex-col gap-2 w-full max-w-2xl mx-auto px-1 sm:px-0">
       {keyRows.map((row, i) => (
-        <div key={i} className="flex justify-center gap-1">
+        <div key={i} className="flex justify-center gap-1 sm:gap-1.5 w-full">
           {row.map((key) => {
             const status = letterStatuses.get(key) || 'empty';
             const isWide = key === 'ENTER' || key === 'BACK';
@@ -35,9 +35,12 @@ export function Keyboard({ onKeyPress, letterStatuses }: KeyboardProps) {
                 key={key}
                 onClick={() => onKeyPress(key)}
                 className={cn(
-                  'font-bold rounded transition-colors',
-                  'py-3 text-sm',
-                  isWide ? 'px-4 min-w-[60px]' : 'px-3 min-w-[40px]',
+                  'font-bold rounded transition-colors select-none',
+                  'h-10 sm:h-12',
+                  'text-[11px] sm:text-sm',
+                  isWide ? 'flex-[1.4]' : 'flex-1',
+                  'min-w-[28px] sm:min-w-[36px]',
+                  'px-1 sm:px-2',
                   colorClasses[status]
                 )}
               >

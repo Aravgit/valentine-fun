@@ -154,13 +154,13 @@ export function ScratchCard({
       />
 
       {/* Instruction hint */}
-      {!isComplete && (
-        <motion.div
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
+        {!isComplete && (
+          <motion.div
+          className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+          >
           Use your finger or mouse to scratch
         </motion.div>
       )}

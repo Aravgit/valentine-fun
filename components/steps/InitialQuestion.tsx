@@ -20,14 +20,14 @@ export function InitialQuestion() {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-valentine-purple-500 via-valentine-pink-500 to-valentine-purple-600 p-8"
+      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-valentine-purple-500 via-valentine-pink-500 to-valentine-purple-600 p-6 sm:p-8"
       variants={fadeIn}
       initial="hidden"
       animate="visible"
       exit="exit"
     >
       <motion.h1
-        className="text-5xl md:text-7xl font-display font-bold text-white text-center mb-16"
+        className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white text-center mb-10 sm:mb-16"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -35,7 +35,7 @@ export function InitialQuestion() {
         Will you be my Valentine?
       </motion.h1>
 
-      <div className="relative w-full h-[200px]">
+      <div className="relative w-full h-[180px] sm:h-[200px]">
         {state.dodgeCount > 0 && (
           <div className="absolute left-1/2 top-1/2 -translate-x-[140px] -translate-y-1/2">
             <GrowingButton dodgeCount={state.dodgeCount} onClick={handleYes} />
@@ -46,7 +46,7 @@ export function InitialQuestion() {
 
       {state.dodgeCount >= 6 && (
         <motion.p
-          className="text-white text-xl mt-12 text-center"
+          className="text-white text-base sm:text-xl mt-10 sm:mt-12 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >

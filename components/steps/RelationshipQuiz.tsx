@@ -83,7 +83,7 @@ export function RelationshipQuiz() {
 
   return (
     <motion.div
-      className="min-h-screen bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-8 flex items-center justify-center"
+      className="min-h-screen bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-6 sm:p-8 flex items-center justify-center"
       variants={fadeIn}
       initial="hidden"
       animate="visible"
@@ -91,7 +91,7 @@ export function RelationshipQuiz() {
     >
       <div className="max-w-2xl w-full">
         <motion.h1
-          className="text-4xl md:text-5xl font-display font-bold text-valentine-purple-600 text-center mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-valentine-purple-600 text-center mb-4"
           variants={slideUp}
           initial="hidden"
           animate="visible"
@@ -100,7 +100,7 @@ export function RelationshipQuiz() {
         </motion.h1>
 
         <motion.p
-          className="text-center text-gray-600 mb-12"
+          className="text-center text-sm sm:text-base text-gray-600 mb-10 sm:mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -108,7 +108,7 @@ export function RelationshipQuiz() {
           Answer these questions about our special moments together
         </motion.p>
 
-        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+        <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
           {/* Progress indicator */}
           <div className="flex justify-center gap-2 mb-8">
             {questions.map((_, index) => (
@@ -150,7 +150,7 @@ export function RelationshipQuiz() {
                     value={userAnswer}
                     onChange={(e) => setUserAnswer(e.target.value)}
                     placeholder="Type your answer..."
-                    className="w-full px-6 py-4 text-lg border-2 border-valentine-purple-300 rounded-xl focus:outline-none focus:border-valentine-purple-500 transition-colors"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border-2 border-valentine-purple-300 rounded-xl focus:outline-none focus:border-valentine-purple-500 transition-colors"
                     autoFocus
                     disabled={isCorrect}
                   />
@@ -179,7 +179,7 @@ export function RelationshipQuiz() {
                 {!isCorrect && (
                   <button
                     type="submit"
-                    className="w-full py-4 bg-valentine-purple-500 hover:bg-valentine-purple-600 text-white font-semibold rounded-xl transition-colors text-lg"
+                    className="w-full py-3 sm:py-4 bg-valentine-purple-500 hover:bg-valentine-purple-600 text-white font-semibold rounded-xl transition-colors text-base sm:text-lg"
                   >
                     Submit Answer
                   </button>

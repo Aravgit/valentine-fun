@@ -13,7 +13,7 @@ export function WordleRow({ guess, colors, isRevealing }: WordleRowProps) {
   const cells = Array(5).fill('');
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-1.5 sm:gap-2">
       {cells.map((_, i) => (
         <WordleCell
           key={i}

@@ -13,7 +13,7 @@ export function ProgressIndicator({ currentStep }: ProgressIndicatorProps) {
   const currentIndex = steps.indexOf(currentStep);
 
   return (
-    <div className="fixed top-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-50">
+    <div className="fixed top-4 sm:top-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-50">
       {steps.map((step, index) => (
         <div
           key={step}

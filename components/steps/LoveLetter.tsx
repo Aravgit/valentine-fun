@@ -65,16 +65,16 @@ export function LoveLetter() {
   return (
     <motion.div
       ref={containerRef}
-      className="min-h-screen bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-8 py-16 pb-96"
+      className="min-h-screen bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-6 sm:p-8 py-12 sm:py-16 pb-72 sm:pb-96"
       variants={fadeIn}
       initial="hidden"
       animate="visible"
       exit="exit"
       onClick={handleClick}
     >
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-2xl p-12 md:p-16 min-h-[80vh]">
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-2xl p-6 sm:p-10 md:p-16 min-h-[70vh] sm:min-h-[80vh]">
         <motion.h2
-          className="text-4xl md:text-5xl font-display font-bold text-valentine-purple-600 text-center mb-12"
+          className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-valentine-purple-600 text-center mb-10 sm:mb-12"
           variants={slideUp}
           initial="hidden"
           animate="visible"
@@ -82,7 +82,7 @@ export function LoveLetter() {
           A Letter For You
         </motion.h2>
 
-        <div className="space-y-8 font-sans text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-8 font-sans text-base sm:text-lg text-gray-700 leading-relaxed">
           {/* Section 1: Click to reveal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

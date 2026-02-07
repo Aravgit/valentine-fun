@@ -15,7 +15,7 @@ export function WordleGame() {
 
   return (
     <motion.div
-      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-8"
+      className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-valentine-purple-50 to-valentine-pink-50 p-6 sm:p-8"
       variants={fadeIn}
       initial="hidden"
       animate="visible"
@@ -27,10 +27,10 @@ export function WordleGame() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-valentine-purple-600 text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-valentine-purple-600 text-center mb-4">
           Find the Valentine Word
         </h2>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-sm sm:text-base text-gray-600 mb-8">
           {config.messages.wordleInstructions}
         </p>
 

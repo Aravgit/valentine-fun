@@ -105,8 +105,8 @@ export function WordleBoard({ onWin }: WordleBoardProps) {
   const rows = Array(maxGuesses).fill('');
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div className="flex flex-col gap-2">
+    <div className="flex flex-col items-center gap-4 sm:gap-6 w-full">
+      <div className="flex flex-col gap-2 sm:gap-3">
         {rows.map((_, i) => {
           const guess = guesses[i];
           const isCurrentRow = i === guesses.length && gameStatus === 'playing';
